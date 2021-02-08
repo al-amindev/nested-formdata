@@ -1,5 +1,5 @@
 const formData = (items, data = new FormData(), name = '') => {
-    items = Array.isArray(items) ? {...items} : items;
+    items = Array.isArray(items) || items instanceof FileList ? {...items} : items;
     for (let key in items) {
         let nestedName = name ? name + '[' + key + ']' : key;
         if (items[key] && typeof items[key] === 'object' && !(items[key] instanceof File)) {
