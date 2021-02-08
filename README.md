@@ -21,9 +21,9 @@ just impot this formData
 ```
 import formData from "formData";
 
-let products={
+let nestedObject={
   //here your nested object
 }
 
-formData(this.products)
+formData(nestedObject)
 ```
